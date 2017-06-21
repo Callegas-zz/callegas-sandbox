@@ -1,0 +1,30 @@
+group 'jt.ilegra'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ([
+          "javax.ws.rs:jsr311-api:1.1.1",
+          'com.google.inject:guice:4.0',
+          'com.sun.jersey:jersey-server:1.13',
+          'com.sun.jersey:jersey-core:1.13',
+          'com.sun.jersey:jersey-servlet:1.13',
+          'org.glassfish.jersey.core:jersey-client:2.25.1',
+          'org.apache.httpcomponents:httpclient:4.5.2'
+
+    ])
+
+    testCompile ([
+            'junit:junit:4.12'
+    ])
+
+
+}
