@@ -30,4 +30,7 @@ dependencies {
              'com.netflix.karyon:karyon2-admin-web:2.2.0-rc.2',
              'com.netflix.karyon:karyon2-eureka:2.2.0-rc.2'
     ])
+     testCompile ([
+            'junit:junit:4.12'
+    ])
 }
