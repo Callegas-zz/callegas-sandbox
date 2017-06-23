@@ -16,7 +16,7 @@ public class BathTest {
     @Test
     public void doBathRegisteredPet(){
         appTest.registerPet(new Pet("Fish", "Babel", 30));
-        Assert.assertTrue(appTest.executeBath(1,"wash", false));
+        Assert.assertFalse(appTest.executeBath(1,"wash", false));
     }
 
     @Test
