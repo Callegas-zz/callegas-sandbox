@@ -1,8 +1,5 @@
 package com.callegasdev;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
 public class BRMService {
 
     public Long calculateBRM(String gender, Integer age, Double heightInCm, Double weightInKg){
