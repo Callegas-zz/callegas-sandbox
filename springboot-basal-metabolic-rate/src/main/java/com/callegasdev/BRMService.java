@@ -5,14 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BRMService {
 
-    public Double calculateBRM(String gender, Integer age, Double heightInCm, Double weightInKg){
+    public Long calculateBRM(String gender, Integer age, Double heightInCm, Double weightInKg){
         if (gender.equalsIgnoreCase("male"))
-            return maleCalc(age, heightInCm, weightInKg);
+            return Math.round(maleCalc(age, heightInCm, weightInKg));
 
         if (gender.equalsIgnoreCase("female"))
-            return femaleCalc(age, heightInCm, weightInKg);
+            return Math.round(femaleCalc(age, heightInCm, weightInKg));
 
-        return 0.0;
+        return 0L;
     }
 
     private Double femaleCalc(Integer age, Double heightInCm, Double weightInKg){

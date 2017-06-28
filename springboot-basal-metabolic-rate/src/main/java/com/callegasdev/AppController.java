@@ -20,6 +20,7 @@ public class AppController {
                                @PathVariable(value = "age") Integer age,
                                @PathVariable(value = "heightInCm") Double heightInCm,
                                @PathVariable(value = "weightInKg") Double weightInKg) {
+
         if (brmService.calculateBRM(gender, age, heightInCm, weightInKg) != 0)
             return "This " + age + " year old " + gender + " needs " +
                     brmService.calculateBRM(gender, age, heightInCm, weightInKg) +
