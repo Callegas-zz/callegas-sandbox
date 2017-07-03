@@ -1,0 +1,21 @@
+group 'callegasdev'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(
+            'junit:junit:4.12'
+    )
+
+    compile(
+            'org.apache.kafka:kafka-clients:0.10.2.1',
+            'org.slf4j:slf4j-log4j12:1.7.19'
+    )
+}
