@@ -9,13 +9,6 @@ public class Book {
     private String author;
     private Integer year;
 
-    public Book(Long id, String name, String author, Integer year) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
-        this.year = year;
-    }
-
     public Long getId() {
         return id;
     }
