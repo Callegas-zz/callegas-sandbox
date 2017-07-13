@@ -24,14 +24,14 @@ public class App {
 
 
         List<BookRestModel> toAdd = Arrays.asList(
-                new BookRestModel(3L, "Black Mirror", "Josh Winston", 2017),
-                new BookRestModel(4L, "Juice", "James Mccree", 1993)
+                new BookRestModel(1L, "Blood Donator", "Josh Winston", 2007),
+                new BookRestModel(2L, "It's high noon", "James Mccree", 1997)
         );
 
-        //toAdd.stream().forEach(book -> fakeApi.add(book));
+        toAdd.stream().forEach(book -> fakeApi.add(book));
 
-        //fakeApi.all().stream().forEach(book -> System.out.println(book.getName()));
-        System.out.println(fakeApi.getById(3L).getName());
+        fakeApi.all().stream().forEach(book -> System.out.println(book.getName()));
+        System.out.println(fakeApi.getById(3L).getAuthor());
     }
 
 }

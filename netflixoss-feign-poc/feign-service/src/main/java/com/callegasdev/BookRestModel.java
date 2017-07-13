@@ -10,6 +10,10 @@ public class BookRestModel {
     private String author;
     private Integer year;
 
+    public BookRestModel() {
+    }
+
+
     public BookRestModel(Long id, String name, String author, Integer year) {
         this.id = id;
         this.name = name;
