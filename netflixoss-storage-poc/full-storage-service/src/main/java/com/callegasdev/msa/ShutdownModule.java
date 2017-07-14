@@ -1,4 +1,4 @@
-package com.callegasdev;
+package com.callegasdev.msa;
 
 public class ShutdownModule extends netflix.karyon.ShutdownModule{
 	

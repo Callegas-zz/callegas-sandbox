@@ -1,5 +1,4 @@
-package com.callegasdev;
-
+package com.callegasdev.msa;
 
 import netflix.karyon.health.HealthCheckHandler;
 
@@ -11,16 +10,16 @@ import javax.ws.rs.core.Response;
 
 @Path("/healthcheck")
 public class HealthcheckResource implements HealthCheckHandler{
-
+	
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response healthcheck() {
         return Response.status(getStatus()).build();
     }
 
-    @Override
-    public int getStatus() {
-        return 200;
-    }
-
+	@Override
+	public int getStatus() {
+		return 200;
+	}
+	
 }
