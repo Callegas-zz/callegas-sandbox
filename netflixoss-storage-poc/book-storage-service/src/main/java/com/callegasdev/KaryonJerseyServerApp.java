@@ -6,7 +6,6 @@ import com.netflix.governator.annotations.Modules;
 
 import netflix.adminresources.resources.KaryonWebAdminModule;
 import netflix.karyon.KaryonBootstrap;
-import netflix.karyon.ShutdownModule;
 import netflix.karyon.archaius.ArchaiusBootstrap;
 import netflix.karyon.eureka.KaryonEurekaModule;
 import netflix.karyon.jersey.blocking.KaryonJerseyModule;
@@ -29,7 +28,7 @@ public interface KaryonJerseyServerApp {
 
             bind(AuthenticationService.class).to(AuthenticationServiceImpl.class);
             interceptorSupport().forUri("/*").intercept(LoggingInterceptor.class);
-            interceptorSupport().forUri("/storage").interceptIn(AuthInterceptor.class);
+            interceptorSupport().forUri("/book").interceptIn(AuthInterceptor.class);
             server().port(6001).threadPoolSize(400);
         }
     }

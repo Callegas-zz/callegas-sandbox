@@ -1,10 +1,18 @@
 package com.callegasdev.rest;
 
-/**
- * Created by callegas on 14/07/17.
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookService {
+
+    private List<Book> books = new ArrayList<>();
+
     public String addBook(String bookName, String bookAuthor) {
-        return "Successfully added!";
+        books.add(new Book(bookName, bookAuthor));
+        return bookName + "has added!";
+    }
+
+    public List<Book> getAll(){
+        return books;
     }
 }
