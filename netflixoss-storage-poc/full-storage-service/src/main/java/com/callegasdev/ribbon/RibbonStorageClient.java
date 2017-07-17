@@ -16,7 +16,7 @@ import rx.Observable;
 import java.nio.charset.Charset;
 
 @SuppressWarnings("unchecked")
-public class RibbonMathClient { 
+public class RibbonStorageClient {
 	
 	private EurekaClient eurekaClient;
 	

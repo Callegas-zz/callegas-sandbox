@@ -1,6 +1,6 @@
 package com.callegasdev.rest;
 
-import com.callegasdev.ribbon.RibbonMathClient;
+import com.callegasdev.ribbon.RibbonStorageClient;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -8,10 +8,10 @@ import javax.inject.Singleton;
 @Singleton
 public class StorageService {
 
-    private RibbonMathClient client;
+    private RibbonStorageClient client;
 
     @Inject
-    public StorageService(RibbonMathClient client) {
+    public StorageService(RibbonStorageClient client) {
         this.client = client;
     }
 
