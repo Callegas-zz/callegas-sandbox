@@ -16,10 +16,10 @@ public class StorageService {
     }
 
     public String show(String product) {
-        if (product == "book") {
-            return client.book() + "";
-        } else if (product == "vinyl") {
-            return client.vinyl() + "";
+        if (product.equalsIgnoreCase("book")) {
+            return client.book().toBlocking().first();
+        } else if (product.equalsIgnoreCase("vinyl")) {
+            return client.vinyl().toBlocking().first();
         } else {
             return "error";
         }

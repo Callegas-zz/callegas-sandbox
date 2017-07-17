@@ -9,7 +9,7 @@ public class BookService {
 
     public String addBook(String bookName, String bookAuthor) {
         books.add(new Book(bookName, bookAuthor));
-        return bookName + "has added!";
+        return bookName + " has added!";
     }
 
     public List<Book> getAll(){
