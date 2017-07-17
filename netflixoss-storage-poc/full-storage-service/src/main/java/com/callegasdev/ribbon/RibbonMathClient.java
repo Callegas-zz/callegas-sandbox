@@ -39,7 +39,7 @@ public class RibbonMathClient {
 		}
 	}
 	
-	private String callService(String microservice,String path,String a,String b){
+	private String callService(String microservice,String path){
 
 		HttpResourceGroup httpRG = Ribbon.createHttpResourceGroup("apiGroup",
 	            ClientOptions.create()
@@ -48,7 +48,7 @@ public class RibbonMathClient {
 		
 		HttpRequestTemplate<ByteBuf> apiTemplate = httpRG.newTemplateBuilder("apiCall",ByteBuf.class)
 		            .withMethod("GET")
-		            .withUriTemplate(path + a + "/" + b)
+		            .withUriTemplate(path)
 		            .withFallbackProvider(new DefaultFallback())
 		            .withResponseValidator(new SimpleResponseValidator())
 		            .build();
@@ -62,12 +62,12 @@ public class RibbonMathClient {
 		return json;
 	}
 	
-	public Observable<Double> book(String a, String b){
-		return Observable.just(new Double(callService("book-storage-service","/storage/book/",a,b)));
+	public Observable<String> book(){
+		return Observable.just(new String(callService("book-storage-service","/book")));
 	}
 	
-	public Observable<Double> vinyl(String a, String b){
-		return Observable.just(new Double(callService("vinyl-disc-storage-service", "/storage/vinyl/",a,b)));
+	public Observable<String> vinyl(){
+		return Observable.just(new String(callService("vinyl-disc-storage-service", "/vinyl")));
 	}
 
 }

@@ -18,23 +18,20 @@ import javax.ws.rs.core.Response;
 public class StorageResource {
 
 	private static final Logger logger = LoggerFactory.getLogger(StorageResource.class);
-	
+
 	private StorageService service;
-	
+
 	@Inject
 	public StorageResource(StorageService service) {
 		this.service = service;
 	}
 	
 	@GET
-	@Path("add/{product}/{tittle}/{author}")
+	@Path("view/{product}/")
 	@Produces(MediaType.TEXT_PLAIN)
-	public Response set(
-			@PathParam("product") String product,
-			@PathParam("tittle") String tittle,
-			@PathParam("author") String author) {
+	public Response getAll(@PathParam("product") String product){
 		try {
-			return Response.ok( service.show(product, tittle, author) + ""  ).
+			return Response.ok( service.show(product) + ""  ).
 							header("CREATED_BY", ArchaiusPropsManager.getInstance().getCreator()).
 							build();
 		} catch (Exception e) {
@@ -59,6 +56,5 @@ public class StorageResource {
 			return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
 		}
 	}
-	
 
 }

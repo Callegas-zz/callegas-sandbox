@@ -15,8 +15,14 @@ public class StorageService {
         this.client = client;
     }
 
-    public String show(String product, String tittle, String author) {
-        return product + " " + tittle + " " + author;
+    public String show(String product) {
+        if (product == "book") {
+            return client.book() + "";
+        } else if (product == "vinyl") {
+            return client.vinyl() + "";
+        } else {
+            return "error";
+        }
     }
 
 }
