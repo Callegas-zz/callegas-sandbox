@@ -36,6 +36,8 @@ cmake-build-debug/
 
 # IntelliJ
 /out/
+/.idea/
+/.gradle/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -87,5 +89,6 @@ hs_err_pid*
 # End of https://www.gitignore.io/api/java,intellij+iml
 
 /build/
+
 
 
