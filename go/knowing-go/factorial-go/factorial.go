@@ -1,5 +1,4 @@
 package main
-
 import "fmt"
 
 func recursiveFactorial(n int) int {
@@ -8,7 +7,6 @@ func recursiveFactorial(n int) int {
 	}
 	return n
 }
-
 
 func factorial(n int) int {
 	total := 1
