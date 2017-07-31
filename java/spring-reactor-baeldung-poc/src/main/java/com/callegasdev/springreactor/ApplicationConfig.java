@@ -7,7 +7,7 @@ import reactor.Environment;
 import reactor.bus.EventBus;
 
 @Configuration
-public class Config {
+public class ApplicationConfig {
 
     @Bean
     Environment env() {

@@ -1,4 +1,4 @@
-package com.callegasdev.springreactor.service.impl;
+package com.callegasdev.springreactor.service;
 
 import com.callegasdev.springreactor.domain.NotificationData;
 import com.callegasdev.springreactor.service.NotificationService;
